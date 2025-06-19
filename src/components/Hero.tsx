@@ -16,9 +16,13 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800 opacity-90"></div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            <span className="text-white">Missão Design</span>
-          </h1>
+          <div className="mb-8 animate-fade-in">
+            <img 
+              src="/lovable-uploads/4f6a8bed-1552-4870-bc67-52057ecf3fed.png" 
+              alt="Missão Design Logo" 
+              className="w-48 h-48 mx-auto mb-4"
+            />
+          </div>
           <p className="text-xl md:text-2xl mb-8 text-gray-300 animate-fade-in">
             Transformamos a sua presença digital em Lisboa e além
           </p>
