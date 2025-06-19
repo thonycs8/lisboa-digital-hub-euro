@@ -1,96 +1,100 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { 
+  Megaphone, 
+  Users, 
+  Smartphone, 
+  Palette, 
+  Target, 
+  TrendingUp, 
+  Code, 
+  Bot 
+} from "lucide-react";
 
 const Services = () => {
   const services = [
     {
+      icon: Megaphone,
       title: "Marketing Digital",
-      description: "Estratégias completas para aumentar a sua presença online e gerar mais leads.",
-      features: ["SEO/SEM", "Content Marketing", "Email Marketing", "Analytics"],
-      price: "A partir de €800/mês"
+      description: "Estratégias digitais completas para aumentar a sua presença online e atrair mais clientes.",
+      features: ["SEO/SEM", "Content Marketing", "Email Marketing"]
     },
     {
+      icon: Users,
       title: "Gestão de Redes Sociais",
-      description: "Criação de conteúdo e gestão profissional das suas redes sociais.",
-      features: ["Criação de Conteúdo", "Posting Schedule", "Community Management", "Relatórios"],
-      price: "A partir de €500/mês"
+      description: "Gestão profissional das suas redes sociais com conteúdo engaging e estratégico.",
+      features: ["Instagram", "Facebook", "LinkedIn"]
     },
     {
+      icon: Smartphone,
       title: "Apps Low Code",
-      description: "Desenvolvimento rápido de aplicações sem programação complexa.",
-      features: ["Prototipagem", "MVP Development", "Integração APIs", "Manutenção"],
-      price: "A partir de €1.200"
+      description: "Desenvolvimento rápido de aplicações móveis e web sem complexidade técnica.",
+      features: ["Bubble", "Webflow", "Zapier"]
     },
     {
+      icon: Palette,
       title: "Web Design",
-      description: "Sites modernos, responsivos e otimizados para conversão.",
-      features: ["Design Responsivo", "UX/UI", "Otimização", "CMS"],
-      price: "A partir de €800"
+      description: "Websites modernos, responsivos e otimizados para conversão.",
+      features: ["UI/UX", "Responsive", "Performance"]
     },
     {
+      icon: Target,
       title: "Branding",
-      description: "Criação de identidade visual única para a sua marca.",
-      features: ["Logo Design", "Manual de Marca", "Materiais Gráficos", "Consultoria"],
-      price: "A partir de €600"
+      description: "Identidade visual completa que diferencia a sua marca no mercado.",
+      features: ["Logo Design", "Brand Guidelines", "Visual Identity"]
     },
     {
-      title: "Consultoria",
-      description: "Consultoria estratégica para acelerar o crescimento do seu negócio.",
-      features: ["Análise de Mercado", "Estratégia Digital", "Plano de Ação", "Mentoria"],
-      price: "€150/hora"
-    },
-    {
-      title: "Desenvolvimento Web",
-      description: "Desenvolvimento de websites e aplicações web personalizadas.",
-      features: ["Frontend/Backend", "E-commerce", "APIs", "Manutenção"],
-      price: "A partir de €1.500"
-    },
-    {
+      icon: TrendingUp,
       title: "Tráfego Pago",
-      description: "Campanhas otimizadas no Google Ads, Facebook Ads e LinkedIn.",
-      features: ["Google Ads", "Facebook/Instagram", "LinkedIn Ads", "Otimização"],
-      price: "€300 + 15% budget"
+      description: "Campanhas publicitárias eficazes no Google Ads, Facebook Ads e outras plataformas.",
+      features: ["Google Ads", "Facebook Ads", "Analytics"]
     },
     {
+      icon: Code,
+      title: "Desenvolvimento Web",
+      description: "Desenvolvimento de websites e aplicações web personalizadas e escaláveis.",
+      features: ["React", "Node.js", "Database"]
+    },
+    {
+      icon: Bot,
       title: "Agentes de IA",
-      description: "Implementação de chatbots e automações inteligentes.",
-      features: ["Chatbots", "Automação", "Integração", "Training"],
-      price: "A partir de €900"
+      description: "Implementação de chatbots e assistentes virtuais para automatizar atendimento.",
+      features: ["ChatGPT", "Automation", "Integration"]
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
             Os Nossos Serviços
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Soluções completas de marketing digital para fazer crescer o seu negócio em Lisboa e além
+            Oferecemos soluções digitais completas para elevar o seu negócio ao próximo nível.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
-              <CardHeader>
-                <CardTitle className="text-xl text-blue-900">{service.title}</CardTitle>
-                <CardDescription className="text-gray-600">{service.description}</CardDescription>
+            <Card key={index} className="border-gray-200 hover:shadow-lg transition-shadow duration-300 bg-white">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                  <service.icon className="w-8 h-8" />
+                </div>
+                <CardTitle className="text-xl font-bold text-black">{service.title}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="flex flex-wrap gap-2">
-                    {service.features.map((feature, idx) => (
-                      <Badge key={idx} variant="secondary" className="bg-blue-100 text-blue-800">
-                        {feature}
-                      </Badge>
-                    ))}
-                  </div>
-                  <div className="text-lg font-bold text-yellow-600">
-                    {service.price}
-                  </div>
+              <CardContent className="text-center">
+                <CardDescription className="text-gray-600 mb-4">
+                  {service.description}
+                </CardDescription>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {service.features.map((feature, idx) => (
+                    <Badge key={idx} variant="secondary" className="bg-gray-100 text-gray-800 hover:bg-gray-200">
+                      {feature}
+                    </Badge>
+                  ))}
                 </div>
               </CardContent>
             </Card>

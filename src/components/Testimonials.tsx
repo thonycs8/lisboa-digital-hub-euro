@@ -1,59 +1,64 @@
 
 import { Card, CardContent } from "@/components/ui/card";
+import { Star } from "lucide-react";
 
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Ana Silva",
-      company: "Boutique Trendy",
-      text: "A Missão Design transformou completamente a nossa presença online. As vendas aumentaram 300% em apenas 6 meses!",
-      rating: 5
-    },
-    {
-      name: "Carlos Mendes",
+      name: "João Silva",
       company: "TechStart Lisboa",
-      text: "Profissionalismo excecional. O app que criaram superou todas as nossas expectativas e está a gerar excelentes resultados.",
-      rating: 5
+      image: "/placeholder.svg",
+      rating: 5,
+      text: "A Missão Design transformou completamente a nossa presença digital. Em 3 meses aumentámos as vendas em 150%."
     },
     {
       name: "Maria Santos",
-      company: "Clínica Bem-Estar",
-      text: "A gestão das nossas redes sociais nunca foi tão eficaz. Recomendo vivamente os serviços da Missão Design.",
-      rating: 5
+      company: "Boutique Elegance",
+      image: "/placeholder.svg", 
+      rating: 5,
+      text: "Profissionalismo exemplar. O website que criaram superou todas as nossas expectativas. Recomendo vivamente!"
     },
     {
-      name: "João Pereira",
-      company: "Restaurante O Bacalhau",
-      text: "O site novo é fantástico e as campanhas de tráfego pago trouxeram muito mais clientes. Obrigado!",
-      rating: 5
+      name: "Pedro Costa",
+      company: "Restaurante Tradição",
+      image: "/placeholder.svg",
+      rating: 5,
+      text: "A gestão das redes sociais pela Missão Design trouxe-nos muito mais clientes. Equipa fantástica!"
     }
   ];
 
   return (
-    <section className="py-20 bg-blue-900 text-white">
+    <section className="py-20 bg-black text-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             O Que Dizem os Nossos Clientes
           </h2>
-          <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-            Testemunhos reais de empresas que transformaram os seus negócios connosco
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Histórias de sucesso de empresas que confiaram na Missão Design para o seu crescimento digital.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-white/10 border-white/20 backdrop-blur-sm">
-              <CardContent className="p-6">
+            <Card key={index} className="bg-gray-900 border-gray-800 hover:bg-gray-800 transition-colors">
+              <CardContent className="p-8">
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-xl">★</span>
+                    <Star key={i} className="w-5 h-5 fill-white text-white" />
                   ))}
                 </div>
-                <p className="text-lg mb-4 text-white">"{testimonial.text}"</p>
-                <div>
-                  <div className="font-bold text-yellow-400">{testimonial.name}</div>
-                  <div className="text-blue-200">{testimonial.company}</div>
+                <p className="text-gray-300 mb-6 italic">"{testimonial.text}"</p>
+                <div className="flex items-center">
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.name}
+                    className="w-12 h-12 rounded-full mr-4 bg-gray-700"
+                  />
+                  <div>
+                    <h4 className="font-bold text-white">{testimonial.name}</h4>
+                    <p className="text-gray-400 text-sm">{testimonial.company}</p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
