@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -14,7 +13,7 @@ const Pricing = () => {
       features: [
         "Website responsivo (até 5 páginas)",
         "SEO básico",
-        "Gestão de 2 redes sociais",
+        "Consultoria de marketing inicial",
         "Suporte por email",
         "Analytics mensais"
       ],
@@ -28,7 +27,7 @@ const Pricing = () => {
       features: [
         "Website completo (até 15 páginas)",
         "SEO avançado",
-        "Gestão de 4 redes sociais",
+        "Gestão de 2 redes sociais",
         "Tráfego pago (€200 incluídos)",
         "Chatbot básico",
         "Suporte prioritário",
