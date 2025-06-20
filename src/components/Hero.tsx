@@ -37,7 +37,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-black font-bold text-lg px-8 py-4"
+              className="border-white text-white hover:bg-white hover:text-black font-bold text-lg px-8 py-4 bg-transparent"
               onClick={scrollToPricing}
             >
               Ver Preços <Euro className="ml-2" />
