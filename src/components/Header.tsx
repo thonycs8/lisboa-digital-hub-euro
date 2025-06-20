@@ -3,28 +3,40 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSelector from "./LanguageSelector";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useLanguage();
 
   const menuItems = [
-    { name: "Início", path: "/" },
-    { name: "Serviços", path: "/#services" },
-    { name: "Sobre", path: "/#about" },
-    { name: "Preços", path: "/#pricing" },
-    { name: "Contacto", path: "/#contact" },
+    { name: t('nav.home'), path: "/" },
+    { name: t('nav.services'), path: "#services" },
+    { name: t('nav.about'), path: "#about" },
+    { name: t('nav.pricing'), path: "#pricing" },
+    { name: t('nav.contact'), path: "#contact" },
   ];
 
-  const scrollToSection = (sectionId: string) => {
-    if (location.pathname !== "/") {
-      window.location.href = `/${sectionId}`;
+  const scrollToSection = (path: string) => {
+    // Se é uma rota normal (sem #), navega normalmente
+    if (!path.startsWith("#")) {
+      setIsMenuOpen(false);
       return;
     }
     
-    if (sectionId.startsWith("#")) {
-      const element = document.getElementById(sectionId.substring(1));
-      element?.scrollIntoView({ behavior: 'smooth' });
+    // Se não estamos na página inicial, redireciona para lá primeiro
+    if (location.pathname !== "/") {
+      window.location.href = `/${path}`;
+      return;
+    }
+    
+    // Scroll para a seção na página atual
+    const sectionId = path.substring(1);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMenuOpen(false);
   };
@@ -34,20 +46,31 @@ const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="text-2xl font-bold text-white">
-            Missão Design
+            {t('hero.title')}
           </Link>
 
           {/* Desktop Menu */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             {menuItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.path)}
-                className="text-gray-300 hover:text-white transition-colors"
-              >
-                {item.name}
-              </button>
+              item.path.startsWith("#") ? (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.path)}
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  {item.name}
+                </button>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
+            <LanguageSelector />
           </nav>
 
           {/* Mobile Menu Button */}
@@ -64,14 +87,28 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-gray-800">
             <nav className="flex flex-col space-y-4">
               {menuItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.path)}
-                  className="text-gray-300 hover:text-white transition-colors text-left"
-                >
-                  {item.name}
-                </button>
+                item.path.startsWith("#") ? (
+                  <button
+                    key={item.name}
+                    onClick={() => scrollToSection(item.path)}
+                    className="text-gray-300 hover:text-white transition-colors text-left"
+                  >
+                    {item.name}
+                  </button>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
+              <div className="pt-2">
+                <LanguageSelector />
+              </div>
             </nav>
           </div>
         )}

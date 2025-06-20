@@ -1,7 +1,11 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Euro } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -16,14 +20,13 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            <span className="text-white">Missão Design</span>
+            <span className="text-white">{t('hero.title')}</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300 animate-fade-in">
-            Transformamos a sua presença digital em Lisboa e além
+            {t('hero.subtitle')}
           </p>
           <p className="text-lg md:text-xl mb-12 text-gray-400 max-w-3xl mx-auto animate-fade-in">
-            Marketing Digital • Gestão de Redes Sociais • Apps Low Code • Web Design • Branding • 
-            Consultoria • Desenvolvimento Web • Tráfego Pago • Agentes de IA
+            {t('hero.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
             <Button 
@@ -31,7 +34,7 @@ const Hero = () => {
               className="bg-white hover:bg-gray-100 text-black font-bold text-lg px-8 py-4"
               onClick={scrollToContact}
             >
-              Comece Hoje <ArrowRight className="ml-2" />
+              {t('hero.cta.start')} <ArrowRight className="ml-2" />
             </Button>
             <Button 
               size="lg" 
@@ -39,7 +42,7 @@ const Hero = () => {
               className="border-white text-white hover:bg-white hover:text-black font-bold text-lg px-8 py-4 bg-transparent"
               onClick={scrollToPricing}
             >
-              Ver Preços <Euro className="ml-2" />
+              {t('hero.cta.pricing')} <Euro className="ml-2" />
             </Button>
           </div>
         </div>
