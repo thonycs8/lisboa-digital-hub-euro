@@ -145,7 +145,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-black">Endereço</h4>
-                    <p className="text-gray-600">Avenida da Liberdade, 123<br />1250-096 Lisboa, Portugal</p>
+                    <p className="text-gray-600">Av D Afonso Henriques n7 3dto<br />2800-011 Almada, Portugal</p>
                   </div>
                 </div>
                 
@@ -155,7 +155,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-black">Telefone</h4>
-                    <p className="text-gray-600">+351 21 XXX XXXX</p>
+                    <p className="text-gray-600">+351 928 294 048</p>
                   </div>
                 </div>
                 
@@ -165,7 +165,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-black">Email</h4>
-                    <p className="text-gray-600">hello@missaodesign.pt</p>
+                    <p className="text-gray-600">contato@missaodesign.com</p>
                   </div>
                 </div>
                 
@@ -185,7 +185,7 @@ const Contact = () => {
               <CardContent className="p-8">
                 <h3 className="text-xl font-bold mb-4">Porquê escolher-nos?</h3>
                 <div className="space-y-3">
-                  <Badge className="bg-white text-black">Baseados em Lisboa</Badge>
+                  <Badge className="bg-white text-black">Baseados em Almada</Badge>
                   <Badge className="bg-white text-black">Resultados Garantidos</Badge>
                   <Badge className="bg-white text-black">Suporte 24/7</Badge>
                   <Badge className="bg-white text-black">Preços Transparentes</Badge>

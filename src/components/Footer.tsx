@@ -9,18 +9,19 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold text-white mb-4">Missão Design</h3>
             <p className="text-gray-300 mb-4 max-w-md">
-              Transformamos negócios através de soluções digitais inovadoras em Lisboa. 
+              Transformamos negócios através de soluções digitais inovadoras em Portugal. 
               A sua missão é o nosso design.
             </p>
             <div className="text-gray-400 mb-4">
-              <p>Avenida da Liberdade, 123</p>
-              <p>1250-096 Lisboa, Portugal</p>
-              <p>+351 21 XXX XXXX</p>
-              <p>hello@missaodesign.pt</p>
+              <p>Av D Afonso Henriques n7 3dto</p>
+              <p>2800-011 Almada, Portugal</p>
+              <p>+351 928 294 048</p>
+              <p>contato@missaodesign.com</p>
+              <p>missaodesign.com</p>
             </div>
             <div className="flex flex-wrap gap-2">
               <Badge variant="secondary" className="bg-gray-800 text-gray-300 hover:bg-gray-700">
-                Lisboa
+                Almada
               </Badge>
               <Badge variant="secondary" className="bg-gray-800 text-gray-300 hover:bg-gray-700">
                 Portugal
