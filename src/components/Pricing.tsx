@@ -1,15 +1,19 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check, Star } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Pricing = () => {
+  const { t } = useLanguage();
+
   const plans = [
     {
-      name: "Starter",
+      name: t('pricing.starter.name'),
       price: "€299",
-      period: "/mês",
-      description: "Perfeito para pequenas empresas que querem começar",
+      period: t('common.month'),
+      description: t('pricing.starter.description'),
       features: [
         "Website responsivo (até 5 páginas)",
         "SEO básico",
@@ -20,10 +24,10 @@ const Pricing = () => {
       popular: false
     },
     {
-      name: "Professional",
+      name: t('pricing.professional.name'),
       price: "€599",
-      period: "/mês", 
-      description: "Ideal para empresas em crescimento",
+      period: t('common.month'), 
+      description: t('pricing.professional.description'),
       features: [
         "Website completo (até 15 páginas)",
         "SEO avançado",
@@ -36,10 +40,10 @@ const Pricing = () => {
       popular: true
     },
     {
-      name: "Enterprise",
+      name: t('pricing.enterprise.name'),
       price: "€1299",
-      period: "/mês",
-      description: "Solução completa para grandes empresas",
+      period: t('common.month'),
+      description: t('pricing.enterprise.description'),
       features: [
         "Website/App personalizado",
         "SEO + SEM completo",
@@ -63,10 +67,10 @@ const Pricing = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-            Planos e Preços
+            {t('pricing.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Escolha o plano ideal para o seu negócio. Todos os preços em euros, sem taxas ocultas.
+            {t('pricing.subtitle')}
           </p>
         </div>
         
@@ -81,7 +85,7 @@ const Pricing = () => {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <Badge className="bg-white text-black px-4 py-1 flex items-center gap-1">
                     <Star className="w-4 h-4 fill-current" />
-                    Mais Popular
+                    {t('pricing.popular')}
                   </Badge>
                 </div>
               )}
@@ -123,7 +127,7 @@ const Pricing = () => {
                   }`}
                   onClick={scrollToContact}
                 >
-                  Escolher {plan.name}
+                  {t('pricing.choose')} {plan.name}
                 </Button>
               </CardContent>
             </Card>

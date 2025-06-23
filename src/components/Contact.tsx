@@ -6,8 +6,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -35,26 +37,26 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-            Vamos Conversar
+            {t('contact.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Pronto para transformar o seu negócio? Entre em contacto connosco e descubra como podemos ajudar.
+            {t('contact.subtitle')}
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <Card className="border-gray-200 bg-white">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-black">Envie-nos uma mensagem</CardTitle>
+              <CardTitle className="text-2xl font-bold text-black">{t('contact.form.title')}</CardTitle>
               <CardDescription className="text-gray-600">
-                Preencha o formulário e entraremos em contacto em 24 horas
+                {t('contact.form.subtitle')}
               </CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="name" className="text-black font-medium">Nome *</Label>
+                    <Label htmlFor="name" className="text-black font-medium">{t('contact.form.name')} *</Label>
                     <Input
                       id="name"
                       name="name"
@@ -66,7 +68,7 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="email" className="text-black font-medium">Email *</Label>
+                    <Label htmlFor="email" className="text-black font-medium">{t('contact.form.email')} *</Label>
                     <Input
                       id="email"
                       name="email"
@@ -81,7 +83,7 @@ const Contact = () => {
                 </div>
                 
                 <div>
-                  <Label htmlFor="company" className="text-black font-medium">Empresa</Label>
+                  <Label htmlFor="company" className="text-black font-medium">{t('contact.form.company')}</Label>
                   <Input
                     id="company"
                     name="company"
@@ -93,7 +95,7 @@ const Contact = () => {
                 </div>
                 
                 <div>
-                  <Label htmlFor="service" className="text-black font-medium">Serviço de Interesse</Label>
+                  <Label htmlFor="service" className="text-black font-medium">{t('contact.form.service')}</Label>
                   <select
                     id="service"
                     name="service"
@@ -113,7 +115,7 @@ const Contact = () => {
                 </div>
                 
                 <div>
-                  <Label htmlFor="message" className="text-black font-medium">Mensagem *</Label>
+                  <Label htmlFor="message" className="text-black font-medium">{t('contact.form.message')} *</Label>
                   <textarea
                     id="message"
                     name="message"
@@ -127,7 +129,7 @@ const Contact = () => {
                 </div>
                 
                 <Button type="submit" className="w-full bg-black text-white hover:bg-gray-800 py-3 text-lg font-bold">
-                  Enviar Mensagem
+                  {t('contact.form.submit')}
                 </Button>
               </form>
             </CardContent>
@@ -136,7 +138,7 @@ const Contact = () => {
           <div className="space-y-8">
             <Card className="border-gray-200 bg-white">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-black">Informações de Contacto</CardTitle>
+                <CardTitle className="text-2xl font-bold text-black">{t('contact.info.title')}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -144,7 +146,7 @@ const Contact = () => {
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-black">Endereço</h4>
+                    <h4 className="font-bold text-black">{t('contact.info.address')}</h4>
                     <p className="text-gray-600">Av D Afonso Henriques n7 3dto<br />2800-011 Almada, Portugal</p>
                   </div>
                 </div>
@@ -154,7 +156,7 @@ const Contact = () => {
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-black">Telefone</h4>
+                    <h4 className="font-bold text-black">{t('contact.info.phone')}</h4>
                     <p className="text-gray-600">+351 928 294 048</p>
                   </div>
                 </div>
@@ -164,7 +166,7 @@ const Contact = () => {
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-black">Email</h4>
+                    <h4 className="font-bold text-black">{t('contact.info.email')}</h4>
                     <p className="text-gray-600">contato@missaodesign.com</p>
                   </div>
                 </div>
@@ -174,7 +176,7 @@ const Contact = () => {
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-black">Horário</h4>
+                    <h4 className="font-bold text-black">{t('contact.info.hours')}</h4>
                     <p className="text-gray-600">Segunda - Sexta: 9h - 18h<br />Sábado: 9h - 13h</p>
                   </div>
                 </div>
@@ -183,7 +185,7 @@ const Contact = () => {
             
             <Card className="border-gray-200 bg-black text-white">
               <CardContent className="p-8">
-                <h3 className="text-xl font-bold mb-4">Porquê escolher-nos?</h3>
+                <h3 className="text-xl font-bold mb-4">{t('contact.why.title')}</h3>
                 <div className="space-y-3">
                   <Badge className="bg-white text-black">Baseados em Almada</Badge>
                   <Badge className="bg-white text-black">Resultados Garantidos</Badge>

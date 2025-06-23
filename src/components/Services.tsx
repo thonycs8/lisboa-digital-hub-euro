@@ -14,62 +14,65 @@ import {
   ArrowRight
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Services = () => {
+  const { t } = useLanguage();
+
   const services = [
     {
       icon: Megaphone,
-      title: "Marketing Digital",
-      description: "Estratégias digitais completas para aumentar a sua presença online e atrair mais clientes.",
+      title: t('services.marketing.title'),
+      description: t('services.marketing.description'),
       features: ["SEO/SEM", "Content Marketing", "Email Marketing"],
       link: "/marketing-digital"
     },
     {
       icon: Users,
-      title: "Gestão de Redes Sociais",
-      description: "Gestão profissional das suas redes sociais com conteúdo engaging e estratégico.",
+      title: t('services.social.title'),
+      description: t('services.social.description'),
       features: ["Instagram", "Facebook", "LinkedIn"],
       link: "/gestao-redes-sociais"
     },
     {
       icon: Smartphone,
-      title: "Apps Low Code",
-      description: "Desenvolvimento rápido de aplicações móveis e web sem complexidade técnica.",
+      title: t('services.apps.title'),
+      description: t('services.apps.description'),
       features: ["Bubble", "Webflow", "Zapier"],
       link: "#contact"
     },
     {
       icon: Palette,
-      title: "Web Design",
-      description: "Websites modernos, responsivos e otimizados para conversão.",
+      title: t('services.webdesign.title'),
+      description: t('services.webdesign.description'),
       features: ["UI/UX", "Responsive", "Performance"],
       link: "#contact"
     },
     {
       icon: Target,
-      title: "Branding",
-      description: "Identidade visual completa que diferencia a sua marca no mercado.",
+      title: t('services.branding.title'),
+      description: t('services.branding.description'),
       features: ["Logo Design", "Brand Guidelines", "Visual Identity"],
       link: "#contact"
     },
     {
       icon: TrendingUp,
-      title: "Tráfego Pago",
-      description: "Campanhas publicitárias eficazes no Google Ads, Facebook Ads e outras plataformas.",
+      title: t('services.traffic.title'),
+      description: t('services.traffic.description'),
       features: ["Google Ads", "Facebook Ads", "Analytics"],
       link: "#contact"
     },
     {
       icon: Code,
-      title: "Desenvolvimento Web",
-      description: "Desenvolvimento de websites e aplicações web personalizadas e escaláveis.",
+      title: t('services.webdev.title'),
+      description: t('services.webdev.description'),
       features: ["React", "Node.js", "Database"],
       link: "#contact"
     },
     {
       icon: Bot,
-      title: "Agentes de IA",
-      description: "Implementação de chatbots e assistentes virtuais para automatizar atendimento.",
+      title: t('services.ai.title'),
+      description: t('services.ai.description'),
       features: ["ChatGPT", "Automation", "Integration"],
       link: "#contact"
     }
@@ -86,10 +89,10 @@ const Services = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-            Os Nossos Serviços
+            {t('services.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Oferecemos soluções digitais completas para elevar o seu negócio ao próximo nível.
+            {t('services.subtitle')}
           </p>
         </div>
         
@@ -118,12 +121,12 @@ const Services = () => {
                     className="w-full bg-black hover:bg-gray-800 text-white"
                     onClick={() => handleServiceClick(service.link)}
                   >
-                    Saber Mais <ArrowRight className="ml-2 w-4 h-4" />
+                    {t('services.button')} <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 ) : (
                   <Link to={service.link} className="w-full">
                     <Button className="w-full bg-black hover:bg-gray-800 text-white">
-                      Saber Mais <ArrowRight className="ml-2 w-4 h-4" />
+                      {t('services.button')} <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
                   </Link>
                 )}

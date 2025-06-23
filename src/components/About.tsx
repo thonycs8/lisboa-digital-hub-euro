@@ -2,13 +2,16 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Users, Award, Clock } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
+  const { t } = useLanguage();
+
   const stats = [
-    { icon: Users, number: "50+", label: "Clientes Satisfeitos" },
-    { icon: Award, number: "100+", label: "Projetos Concluídos" },
-    { icon: CheckCircle, number: "98%", label: "Taxa de Sucesso" },
-    { icon: Clock, number: "24/7", label: "Suporte Disponível" }
+    { icon: Users, number: "50+", label: t('about.stats.clients') },
+    { icon: Award, number: "100+", label: t('about.stats.projects') },
+    { icon: CheckCircle, number: "98%", label: t('about.stats.success') },
+    { icon: Clock, number: "24/7", label: t('about.stats.support') }
   ];
 
   return (
@@ -17,15 +20,13 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-              Sobre a Missão Design
+              {t('about.title')}
             </h2>
             <p className="text-lg text-gray-600 mb-6">
-              Somos uma agência digital baseada em Lisboa, especializada em transformar 
-              negócios através de soluções digitais inovadoras e estratégias de marketing eficazes.
+              {t('about.description1')}
             </p>
             <p className="text-lg text-gray-600 mb-8">
-              A nossa missão é ajudar empresas a crescer no mundo digital, oferecendo 
-              serviços personalizados que geram resultados reais e mensuráveis.
+              {t('about.description2')}
             </p>
             
             <div className="flex flex-wrap gap-3 mb-8">
