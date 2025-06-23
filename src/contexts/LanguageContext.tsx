@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'pt' | 'en' | 'es' | 'fr';
@@ -17,7 +16,11 @@ interface Translations {
   hero: {
     title: string;
     subtitle: string;
-    cta: string;
+    description: string;
+    cta: {
+      start: string;
+      pricing: string;
+    };
   };
   
   // Services section
@@ -157,7 +160,11 @@ const translations: Record<Language, Translations> = {
     hero: {
       title: 'Missão Design',
       subtitle: 'Impulsione o crescimento da sua empresa com soluções em Marketing, Web Design e Inteligência Artificial',
-      cta: 'Começar Agora',
+      description: 'A Missão Design oferece estratégias personalizadas para ajudar a sua empresa a crescer de forma previsível, automática e eficiente. Está na hora de levar a sua empresa ao próximo nível.',
+      cta: {
+        start: 'Começar Agora',
+        pricing: 'Ver Preços',
+      },
     },
     services: {
       title: 'Os Nossos Serviços',
@@ -283,7 +290,11 @@ const translations: Record<Language, Translations> = {
     hero: {
       title: 'Missão Design',
       subtitle: 'Boost your business growth with Marketing, Web Design and Artificial Intelligence solutions',
-      cta: 'Get Started',
+      description: 'Missão Design offers personalized strategies to help your business grow in a predictable, automatic and efficient way. It\'s time to take your business to the next level.',
+      cta: {
+        start: 'Get Started',
+        pricing: 'View Pricing',
+      },
     },
     services: {
       title: 'Our Services',
@@ -409,7 +420,11 @@ const translations: Record<Language, Translations> = {
     hero: {
       title: 'Missão Design',
       subtitle: 'Impulsa el crecimiento de tu empresa con soluciones en Marketing, Diseño Web e Inteligencia Artificial',
-      cta: 'Empezar Ahora',
+      description: 'Missão Design ofrece estrategias personalizadas para ayudar a tu empresa a crecer de forma predecible, automática y eficiente. Es hora de llevar tu empresa al siguiente nivel.',
+      cta: {
+        start: 'Empezar Ahora',
+        pricing: 'Ver Precios',
+      },
     },
     services: {
       title: 'Nuestros Servicios',
@@ -535,7 +550,11 @@ const translations: Record<Language, Translations> = {
     hero: {
       title: 'Missão Design',
       subtitle: 'Boostez la croissance de votre entreprise avec des solutions en Marketing, Web Design et Intelligence Artificielle',
-      cta: 'Commencer',
+      description: 'Missão Design offre des stratégies personnalisées pour aider votre entreprise à croître de manière prévisible, automatique et efficace. Il est temps d\'amener votre entreprise au niveau supérieur.',
+      cta: {
+        start: 'Commencer',
+        pricing: 'Voir les Prix',
+      },
     },
     services: {
       title: 'Nos Services',
