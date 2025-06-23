@@ -28,21 +28,23 @@ const Hero = () => {
           <p className="text-lg md:text-xl mb-12 text-gray-400 max-w-3xl mx-auto animate-fade-in">
             {t('hero.description')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in">
             <Button 
               size="lg" 
-              className="bg-white hover:bg-gray-100 text-black font-bold text-lg px-8 py-4"
+              className="bg-white hover:bg-gray-100 text-black font-semibold text-lg px-8 py-4 h-14 transition-all duration-300 hover:scale-105 shadow-lg"
               onClick={scrollToContact}
             >
-              {t('hero.cta.start')} <ArrowRight className="ml-2" />
+              {t('hero.cta.start')} 
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-black font-bold text-lg px-8 py-4 bg-transparent"
+              className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold text-lg px-8 py-4 h-14 bg-transparent transition-all duration-300 hover:scale-105 shadow-lg"
               onClick={scrollToPricing}
             >
-              {t('hero.cta.pricing')} <Euro className="ml-2" />
+              {t('hero.cta.pricing')} 
+              <Euro className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </div>
