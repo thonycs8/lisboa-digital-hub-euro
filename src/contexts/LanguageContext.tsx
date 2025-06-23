@@ -100,17 +100,24 @@ interface Translations {
     title: string;
     subtitle: string;
     form: {
+      title: string;
+      subtitle: string;
       name: string;
       email: string;
       company: string;
+      service: string;
       message: string;
-      send: string;
+      submit: string;
     };
     info: {
+      title: string;
       address: string;
       phone: string;
       email: string;
       hours: string;
+    };
+    why: {
+      title: string;
     };
   };
   
@@ -236,17 +243,24 @@ const translations: Record<Language, Translations> = {
       title: 'Entre em Contacto',
       subtitle: 'Pronto para transformar o seu negócio? Vamos conversar!',
       form: {
+        title: 'Envie-nos uma Mensagem',
+        subtitle: 'Preencha o formulário e entraremos em contacto em breve.',
         name: 'Nome',
         email: 'Email',
         company: 'Empresa',
+        service: 'Serviço de Interesse',
         message: 'Mensagem',
-        send: 'Enviar Mensagem',
+        submit: 'Enviar Mensagem',
       },
       info: {
+        title: 'Informações de Contacto',
         address: 'Morada',
         phone: 'Telefone',
         email: 'Email',
         hours: 'Horário',
+      },
+      why: {
+        title: 'Porquê Escolher-nos?',
       },
     },
     footer: {
@@ -366,17 +380,24 @@ const translations: Record<Language, Translations> = {
       title: 'Get In Touch',
       subtitle: 'Ready to transform your business? Let\'s talk!',
       form: {
+        title: 'Send us a Message',
+        subtitle: 'Fill out the form and we\'ll get back to you soon.',
         name: 'Name',
         email: 'Email',
         company: 'Company',
+        service: 'Service of Interest',
         message: 'Message',
-        send: 'Send Message',
+        submit: 'Send Message',
       },
       info: {
+        title: 'Contact Information',
         address: 'Address',
         phone: 'Phone',
         email: 'Email',
         hours: 'Hours',
+      },
+      why: {
+        title: 'Why Choose Us?',
       },
     },
     footer: {
@@ -496,17 +517,24 @@ const translations: Record<Language, Translations> = {
       title: 'Ponte en Contacto',
       subtitle: '¿Listo para transformar tu negocio? ¡Hablemos!',
       form: {
+        title: 'Envíanos un Mensaje',
+        subtitle: 'Completa el formulario y nos pondremos en contacto pronto.',
         name: 'Nombre',
         email: 'Email',
         company: 'Empresa',
+        service: 'Servicio de Interés',
         message: 'Mensaje',
-        send: 'Enviar Mensaje',
+        submit: 'Enviar Mensaje',
       },
       info: {
+        title: 'Información de Contacto',
         address: 'Dirección',
         phone: 'Teléfono',
         email: 'Email',
         hours: 'Horario',
+      },
+      why: {
+        title: '¿Por qué Elegirnos?',
       },
     },
     footer: {
@@ -626,17 +654,24 @@ const translations: Record<Language, Translations> = {
       title: 'Entrer en Contact',
       subtitle: 'Prêt à transformer votre entreprise ? Parlons-en !',
       form: {
+        title: 'Envoyez-nous un Message',
+        subtitle: 'Remplissez le formulaire et nous vous recontacterons bientôt.',
         name: 'Nom',
         email: 'Email',
         company: 'Entreprise',
+        service: 'Service d\'Intérêt',
         message: 'Message',
-        send: 'Envoyer le Message',
+        submit: 'Envoyer le Message',
       },
       info: {
+        title: 'Informations de Contact',
         address: 'Adresse',
         phone: 'Téléphone',
         email: 'Email',
         hours: 'Horaires',
+      },
+      why: {
+        title: 'Pourquoi Nous Choisir ?',
       },
     },
     footer: {
