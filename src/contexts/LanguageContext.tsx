@@ -283,7 +283,7 @@ const translations: Record<Language, Translations> = {
         blog: 'Blog',
         privacy: 'Política de Privacidade',
       },
-      copyright: '2024 Missão Design. Todos os direitos reservados. | NIF: XXX XXX XXX',
+      copyright: '2024 Missão Design. Todos os direitos reservados.',
       compliance: {
         gdpr: 'GDPR Compliant',
         iso: 'ISO 27001',
@@ -557,7 +557,7 @@ const translations: Record<Language, Translations> = {
         blog: 'Blog',
         privacy: 'Política de Privacidad',
       },
-      copyright: '2024 Missão Design. Todos los derechos reservados. | NIF: XXX XXX XXX',
+      copyright: '2024 Missão Design. Todos los derechos reservados.',
       compliance: {
         gdpr: 'GDPR Compliant',
         iso: 'ISO 27001',
