@@ -7,6 +7,7 @@ interface Translations {
   nav: {
     home: string;
     services: string;
+    portfolio: string;
     about: string;
     pricing: string;
     contact: string;
@@ -121,6 +122,35 @@ interface Translations {
     };
   };
   
+  // Portfolio section
+  portfolio: {
+    title: string;
+    subtitle: string;
+    filters: {
+      all: string;
+      webdesign: string;
+      marketing: string;
+      ecommerce: string;
+      ai: string;
+    };
+    projects: {
+      ecommerce: { description: string; };
+      marketing: { description: string; };
+      website: { description: string; };
+      chatbot: { description: string; };
+      app: { description: string; };
+      dashboard: { description: string; };
+    };
+    buttons: {
+      live: string;
+      code: string;
+    };
+    cta: {
+      text: string;
+      button: string;
+    };
+  };
+  
   // Footer section
   footer: {
     description: string;
@@ -160,6 +190,7 @@ const translations: Record<Language, Translations> = {
     nav: {
       home: 'Início',
       services: 'Serviços',
+      portfolio: 'Portfólio',
       about: 'Sobre',
       pricing: 'Preços',
       contact: 'Contacto',
@@ -263,6 +294,33 @@ const translations: Record<Language, Translations> = {
         title: 'Porquê Escolher-nos?',
       },
     },
+    portfolio: {
+      title: 'Nosso Portfólio',
+      subtitle: 'Conheça alguns dos projetos que transformaram negócios',
+      filters: {
+        all: 'Todos',
+        webdesign: 'Web Design',
+        marketing: 'Marketing',
+        ecommerce: 'E-commerce',
+        ai: 'Inteligência Artificial',
+      },
+      projects: {
+        ecommerce: { description: 'Loja online completa com sistema de pagamentos integrado e gestão de inventário.' },
+        marketing: { description: 'Campanha de marketing digital que aumentou as vendas em 150% em 3 meses.' },
+        website: { description: 'Website corporativo moderno e responsivo com foco na conversão de visitantes.' },
+        chatbot: { description: 'Assistente virtual inteligente que automatiza 80% do atendimento ao cliente.' },
+        app: { description: 'Aplicação mobile para restaurante com sistema de pedidos e pagamentos online.' },
+        dashboard: { description: 'Dashboard analítico avançado para monitorização de performance em tempo real.' },
+      },
+      buttons: {
+        live: 'Ver Online',
+        code: 'Ver Código',
+      },
+      cta: {
+        text: 'Tem um projeto em mente? Vamos transformá-lo em realidade.',
+        button: 'Iniciar Projeto',
+      },
+    },
     footer: {
       description: 'Transformamos negócios através de soluções digitais inovadoras em Portugal. A sua missão é o nosso design.',
       services: {
@@ -297,6 +355,7 @@ const translations: Record<Language, Translations> = {
     nav: {
       home: 'Home',
       services: 'Services',
+      portfolio: 'Portfolio',
       about: 'About',
       pricing: 'Pricing',
       contact: 'Contact',
@@ -400,6 +459,33 @@ const translations: Record<Language, Translations> = {
         title: 'Why Choose Us?',
       },
     },
+    portfolio: {
+      title: 'Our Portfolio',
+      subtitle: 'Discover some of the projects that transformed businesses',
+      filters: {
+        all: 'All',
+        webdesign: 'Web Design',
+        marketing: 'Marketing',
+        ecommerce: 'E-commerce',
+        ai: 'Artificial Intelligence',
+      },
+      projects: {
+        ecommerce: { description: 'Complete online store with integrated payment system and inventory management.' },
+        marketing: { description: 'Digital marketing campaign that increased sales by 150% in 3 months.' },
+        website: { description: 'Modern and responsive corporate website focused on visitor conversion.' },
+        chatbot: { description: 'Intelligent virtual assistant that automates 80% of customer service.' },
+        app: { description: 'Mobile application for restaurant with online ordering and payment system.' },
+        dashboard: { description: 'Advanced analytics dashboard for real-time performance monitoring.' },
+      },
+      buttons: {
+        live: 'View Live',
+        code: 'View Code',
+      },
+      cta: {
+        text: 'Have a project in mind? Let\'s turn it into reality.',
+        button: 'Start Project',
+      },
+    },
     footer: {
       description: 'We transform businesses through innovative digital solutions in Portugal. Your mission is our design.',
       services: {
@@ -434,6 +520,7 @@ const translations: Record<Language, Translations> = {
     nav: {
       home: 'Inicio',
       services: 'Servicios',
+      portfolio: 'Portafolio',
       about: 'Acerca',
       pricing: 'Precios',
       contact: 'Contacto',
@@ -537,6 +624,33 @@ const translations: Record<Language, Translations> = {
         title: '¿Por qué Elegirnos?',
       },
     },
+    portfolio: {
+      title: 'Nuestro Portafolio',
+      subtitle: 'Descubre algunos de los proyectos que transformaron negocios',
+      filters: {
+        all: 'Todos',
+        webdesign: 'Diseño Web',
+        marketing: 'Marketing',
+        ecommerce: 'E-commerce',
+        ai: 'Inteligencia Artificial',
+      },
+      projects: {
+        ecommerce: { description: 'Tienda online completa con sistema de pagos integrado y gestión de inventario.' },
+        marketing: { description: 'Campaña de marketing digital que aumentó las ventas en 150% en 3 meses.' },
+        website: { description: 'Sitio web corporativo moderno y responsivo enfocado en la conversión de visitantes.' },
+        chatbot: { description: 'Asistente virtual inteligente que automatiza el 80% del servicio al cliente.' },
+        app: { description: 'Aplicación móvil para restaurante con sistema de pedidos y pagos en línea.' },
+        dashboard: { description: 'Dashboard analítico avanzado para monitoreo de rendimiento en tiempo real.' },
+      },
+      buttons: {
+        live: 'Ver En Vivo',
+        code: 'Ver Código',
+      },
+      cta: {
+        text: '¿Tienes un proyecto en mente? Vamos a convertirlo en realidad.',
+        button: 'Iniciar Proyecto',
+      },
+    },
     footer: {
       description: 'Transformamos negocios a través de soluciones digitales innovadoras en Portugal. Tu misión es nuestro diseño.',
       services: {
@@ -571,8 +685,9 @@ const translations: Record<Language, Translations> = {
     nav: {
       home: 'Accueil',
       services: 'Services',
-      about: 'À propos',
-      pricing: 'Prix',
+      portfolio: 'Portfolio',
+      about: 'À Propos',
+      pricing: 'Tarifs',
       contact: 'Contact',
     },
     hero: {
@@ -672,6 +787,33 @@ const translations: Record<Language, Translations> = {
       },
       why: {
         title: 'Pourquoi Nous Choisir ?',
+      },
+    },
+    portfolio: {
+      title: 'Notre Portfolio',
+      subtitle: 'Découvrez quelques-uns des projets qui ont transformé des entreprises',
+      filters: {
+        all: 'Tous',
+        webdesign: 'Web Design',
+        marketing: 'Marketing',
+        ecommerce: 'E-commerce',
+        ai: 'Intelligence Artificielle',
+      },
+      projects: {
+        ecommerce: { description: 'Boutique en ligne complète avec système de paiement intégré et gestion d\'inventaire.' },
+        marketing: { description: 'Campagne de marketing digital qui a augmenté les ventes de 150% en 3 mois.' },
+        website: { description: 'Site web corporatif moderne et responsive axé sur la conversion des visiteurs.' },
+        chatbot: { description: 'Assistant virtuel intelligent qui automatise 80% du service client.' },
+        app: { description: 'Application mobile pour restaurant avec système de commande et paiement en ligne.' },
+        dashboard: { description: 'Dashboard analytique avancé pour surveillance de performance en temps réel.' },
+      },
+      buttons: {
+        live: 'Voir En Direct',
+        code: 'Voir le Code',
+      },
+      cta: {
+        text: 'Vous avez un projet en tête ? Transformons-le en réalité.',
+        button: 'Démarrer le Projet',
       },
     },
     footer: {
