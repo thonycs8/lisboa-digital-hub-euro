@@ -70,13 +70,13 @@ const Portfolio = () => {
     },
     {
       id: 6,
-      title: "Dashboard Analytics",
+      title: "Dashboard Unisyst",
       description: t('portfolio.projects.dashboard.description'),
-      category: "marketing",
+      category: "CRM",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop&crop=center",
       tags: ["React", "D3.js", "API Integration"],
-      liveUrl: "#",
-      githubUrl: "#"
+      liveUrl: "https://unisyst.com.br/",
+      githubUrl: "https://github.com/thonycs8/dashboard"
     }
   ];
 
