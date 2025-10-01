@@ -8,8 +8,12 @@ import Testimonials from "@/components/Testimonials";
 // import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Index = () => {
+  useScrollReveal();
+  
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -21,6 +25,7 @@ const Index = () => {
       {/* <Pricing /> */}
       <Contact />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
