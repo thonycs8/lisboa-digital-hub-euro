@@ -59,7 +59,7 @@ const Affiliates = () => {
             <Button 
               size="lg" 
               className="bg-white text-black hover:bg-gray-200 px-8 py-6 text-lg"
-              onClick={() => window.open('https://wa.me/+351928294048?text=Olá! Gostaria de me inscrever no Programa de Afiliados', '_blank')}
+              onClick={() => window.open('https://wa.me/?phone=%2B351928294048&text=Olá%21+Gostaria+de+me+inscrever+no+Programa+de+Afiliados&type=phone_number&app_absent=0', '_blank')}
             >
               Inscrever-se Agora
             </Button>
@@ -215,7 +215,7 @@ const Affiliates = () => {
             <Button 
               size="lg" 
               className="bg-white text-black hover:bg-gray-200 px-8 py-6 text-lg"
-              onClick={() => window.open('https://wa.me/+351928294048?text=Olá! Gostaria de me inscrever no Programa de Afiliados', '_blank')}
+              onClick={() => window.open('https://wa.me/?phone=%2B351928294048&text=Olá%21+Gostaria+de+me+inscrever+no+Programa+de+Afiliados&type=phone_number&app_absent=0', '_blank')}
             >
               Começar Agora
             </Button>

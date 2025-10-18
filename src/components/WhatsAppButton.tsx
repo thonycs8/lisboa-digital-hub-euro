@@ -3,9 +3,7 @@ import { useState, useEffect } from "react";
 
 const WhatsAppButton = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const whatsappNumber = "+351928294048";
-  const message = encodeURIComponent("Olá! Gostaria de saber mais sobre os vossos serviços.");
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+  const whatsappUrl = "https://wa.me/?phone=%2B351928294048&text=Olá%21+Gostaria+de+saber+mais+sobre+os+vossos+serviços.&type=phone_number&app_absent=0";
 
   useEffect(() => {
     // Show button after 2 seconds with animation
