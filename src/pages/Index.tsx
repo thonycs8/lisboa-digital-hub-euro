@@ -9,6 +9,7 @@ import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import CookieConsent from "@/components/CookieConsent";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Index = () => {
@@ -26,6 +27,7 @@ const Index = () => {
       <Contact />
       <Footer />
       <WhatsAppButton />
+      <CookieConsent />
     </div>
   );
 };

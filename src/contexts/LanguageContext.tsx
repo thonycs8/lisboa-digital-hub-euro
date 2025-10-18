@@ -169,6 +169,8 @@ interface Translations {
       contact: string;
       blog: string;
       privacy: string;
+      cookies: string;
+      affiliates: string;
     };
     copyright: string;
     compliance: {
@@ -180,6 +182,54 @@ interface Translations {
   // Common
   common: {
     month: string;
+  };
+
+  // Privacy Policy
+  privacy: {
+    title: string;
+    lastUpdated: string;
+    intro: { title: string; description: string; };
+    dataCollection: { title: string; description: string; };
+    dataUsage: { title: string; description: string; };
+    gdpr: { title: string; description: string; };
+    dataSecurity: { title: string; };
+    dataSharing: { title: string; };
+    retention: { title: string; };
+    contact: { title: string; };
+  };
+
+  // Cookie Policy
+  cookies: {
+    title: string;
+    lastUpdated: string;
+    intro: { title: string; description: string; };
+    whatAre: { title: string; };
+    types: { title: string; };
+    thirdParty: { title: string; };
+    management: { title: string; };
+    consent: { title: string; };
+    contact: { title: string; };
+  };
+
+  // Cookie Consent Banner
+  cookieConsent: {
+    title: string;
+    description: string;
+    accept: string;
+    reject: string;
+    customize: string;
+    learnMore: string;
+  };
+
+  // Affiliates
+  affiliates: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    benefits: { title: string; subtitle: string; };
+    howItWorks: { title: string; subtitle: string; };
+    commission: { title: string; };
+    cta: { title: string; subtitle: string; };
   };
 }
 
@@ -336,6 +386,8 @@ const translations: Record<Language, Translations> = {
         contact: 'Contacto',
         blog: 'Blog',
         privacy: 'Política de Privacidade',
+        cookies: 'Política de Cookies',
+        affiliates: 'Programa de Afiliados',
       },
       copyright: '2024 Missão Design. Todos os direitos reservados.',
       compliance: {
@@ -345,6 +397,70 @@ const translations: Record<Language, Translations> = {
     },
     common: {
       month: '/mês',
+    },
+    privacy: {
+      title: 'Política de Privacidade',
+      lastUpdated: 'Última atualização',
+      intro: {
+        title: 'Introdução',
+        description: 'A Missão Design está comprometida em proteger a sua privacidade. Esta Política de Privacidade explica como coletamos, usamos, divulgamos e protegemos as suas informações pessoais de acordo com o Regulamento Geral de Proteção de Dados (GDPR).'
+      },
+      dataCollection: {
+        title: 'Dados Que Coletamos',
+        description: 'Podemos coletar e processar os seguintes tipos de dados:'
+      },
+      dataUsage: {
+        title: 'Como Utilizamos os Seus Dados',
+        description: 'Utilizamos as informações coletadas para:'
+      },
+      gdpr: {
+        title: 'Seus Direitos (GDPR)',
+        description: 'De acordo com o GDPR, você tem os seguintes direitos:'
+      },
+      dataSecurity: { title: 'Segurança dos Dados' },
+      dataSharing: { title: 'Partilha de Dados' },
+      retention: { title: 'Retenção de Dados' },
+      contact: { title: 'Contacte-nos' },
+    },
+    cookies: {
+      title: 'Política de Cookies',
+      lastUpdated: 'Última atualização',
+      intro: {
+        title: 'Sobre Esta Política',
+        description: 'Esta Política de Cookies explica o que são cookies, como os utilizamos e as suas opções relativamente ao uso de cookies no nosso website.'
+      },
+      whatAre: { title: 'O Que São Cookies?' },
+      types: { title: 'Tipos de Cookies Que Utilizamos' },
+      thirdParty: { title: 'Cookies de Terceiros' },
+      management: { title: 'Gestão de Cookies' },
+      consent: { title: 'Consentimento' },
+      contact: { title: 'Contacte-nos' },
+    },
+    cookieConsent: {
+      title: '🍪 Utilizamos Cookies',
+      description: 'Utilizamos cookies para melhorar a sua experiência, analisar o tráfego e personalizar conteúdo.',
+      accept: 'Aceitar Todos',
+      reject: 'Rejeitar',
+      customize: 'Personalizar',
+      learnMore: 'Saiba mais',
+    },
+    affiliates: {
+      badge: 'Programa de Parceiros',
+      title: 'Programa de Afiliados Missão Design',
+      subtitle: 'Ganhe comissões recorrentes indicando os nossos serviços premium de marketing digital, web design e IA.',
+      benefits: {
+        title: 'Por Que Se Tornar Afiliado?',
+        subtitle: 'Benefícios exclusivos para parceiros comprometidos'
+      },
+      howItWorks: {
+        title: 'Como Funciona?',
+        subtitle: 'Simples, transparente e lucrativo'
+      },
+      commission: { title: 'Estrutura de Comissões' },
+      cta: {
+        title: 'Pronto Para Começar?',
+        subtitle: 'Inscreva-se hoje e comece a ganhar comissões recorrentes!'
+      },
     },
   },
   en: {
@@ -499,8 +615,10 @@ const translations: Record<Language, Translations> = {
         contact: 'Contact',
         blog: 'Blog',
         privacy: 'Privacy Policy',
+        cookies: 'Cookie Policy',
+        affiliates: 'Affiliate Program',
       },
-      copyright: '2024 Missão Design. All rights reserved. | VAT: XXX XXX XXX',
+      copyright: '2024 Missão Design. All rights reserved.',
       compliance: {
         gdpr: 'GDPR Compliant',
         iso: 'ISO 27001',
@@ -508,6 +626,70 @@ const translations: Record<Language, Translations> = {
     },
     common: {
       month: '/month',
+    },
+    privacy: {
+      title: 'Privacy Policy',
+      lastUpdated: 'Last updated',
+      intro: {
+        title: 'Introduction',
+        description: 'Missão Design is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose and protect your personal information in accordance with the General Data Protection Regulation (GDPR).'
+      },
+      dataCollection: {
+        title: 'Data We Collect',
+        description: 'We may collect and process the following types of data:'
+      },
+      dataUsage: {
+        title: 'How We Use Your Data',
+        description: 'We use the collected information to:'
+      },
+      gdpr: {
+        title: 'Your Rights (GDPR)',
+        description: 'Under GDPR, you have the following rights:'
+      },
+      dataSecurity: { title: 'Data Security' },
+      dataSharing: { title: 'Data Sharing' },
+      retention: { title: 'Data Retention' },
+      contact: { title: 'Contact Us' },
+    },
+    cookies: {
+      title: 'Cookie Policy',
+      lastUpdated: 'Last updated',
+      intro: {
+        title: 'About This Policy',
+        description: 'This Cookie Policy explains what cookies are, how we use them and your choices regarding the use of cookies on our website.'
+      },
+      whatAre: { title: 'What Are Cookies?' },
+      types: { title: 'Types of Cookies We Use' },
+      thirdParty: { title: 'Third-Party Cookies' },
+      management: { title: 'Cookie Management' },
+      consent: { title: 'Consent' },
+      contact: { title: 'Contact Us' },
+    },
+    cookieConsent: {
+      title: '🍪 We Use Cookies',
+      description: 'We use cookies to improve your experience, analyze traffic and personalize content.',
+      accept: 'Accept All',
+      reject: 'Reject',
+      customize: 'Customize',
+      learnMore: 'Learn more',
+    },
+    affiliates: {
+      badge: 'Partner Program',
+      title: 'Missão Design Affiliate Program',
+      subtitle: 'Earn recurring commissions by referring our premium digital marketing, web design and AI services.',
+      benefits: {
+        title: 'Why Become an Affiliate?',
+        subtitle: 'Exclusive benefits for committed partners'
+      },
+      howItWorks: {
+        title: 'How It Works?',
+        subtitle: 'Simple, transparent and profitable'
+      },
+      commission: { title: 'Commission Structure' },
+      cta: {
+        title: 'Ready to Start?',
+        subtitle: 'Sign up today and start earning recurring commissions!'
+      },
     },
   },
   es: {
@@ -662,6 +844,8 @@ const translations: Record<Language, Translations> = {
         contact: 'Contacto',
         blog: 'Blog',
         privacy: 'Política de Privacidad',
+        cookies: 'Política de Cookies',
+        affiliates: 'Programa de Afiliados',
       },
       copyright: '2024 Missão Design. Todos los derechos reservados.',
       compliance: {
@@ -671,6 +855,70 @@ const translations: Record<Language, Translations> = {
     },
     common: {
       month: '/mes',
+    },
+    privacy: {
+      title: 'Política de Privacidad',
+      lastUpdated: 'Última actualización',
+      intro: {
+        title: 'Introducción',
+        description: 'Missão Design está comprometida a proteger su privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos su información personal de acuerdo con el Reglamento General de Protección de Datos (GDPR).'
+      },
+      dataCollection: {
+        title: 'Datos Que Recopilamos',
+        description: 'Podemos recopilar y procesar los siguientes tipos de datos:'
+      },
+      dataUsage: {
+        title: 'Cómo Utilizamos Sus Datos',
+        description: 'Utilizamos la información recopilada para:'
+      },
+      gdpr: {
+        title: 'Sus Derechos (GDPR)',
+        description: 'Según el GDPR, tiene los siguientes derechos:'
+      },
+      dataSecurity: { title: 'Seguridad de Datos' },
+      dataSharing: { title: 'Compartir Datos' },
+      retention: { title: 'Retención de Datos' },
+      contact: { title: 'Contáctenos' },
+    },
+    cookies: {
+      title: 'Política de Cookies',
+      lastUpdated: 'Última actualización',
+      intro: {
+        title: 'Sobre Esta Política',
+        description: 'Esta Política de Cookies explica qué son las cookies, cómo las utilizamos y sus opciones con respecto al uso de cookies en nuestro sitio web.'
+      },
+      whatAre: { title: '¿Qué Son Las Cookies?' },
+      types: { title: 'Tipos de Cookies Que Utilizamos' },
+      thirdParty: { title: 'Cookies de Terceros' },
+      management: { title: 'Gestión de Cookies' },
+      consent: { title: 'Consentimiento' },
+      contact: { title: 'Contáctenos' },
+    },
+    cookieConsent: {
+      title: '🍪 Utilizamos Cookies',
+      description: 'Utilizamos cookies para mejorar su experiencia, analizar el tráfico y personalizar el contenido.',
+      accept: 'Aceptar Todas',
+      reject: 'Rechazar',
+      customize: 'Personalizar',
+      learnMore: 'Más información',
+    },
+    affiliates: {
+      badge: 'Programa de Socios',
+      title: 'Programa de Afiliados Missão Design',
+      subtitle: 'Gane comisiones recurrentes recomendando nuestros servicios premium de marketing digital, diseño web e IA.',
+      benefits: {
+        title: '¿Por Qué Ser Afiliado?',
+        subtitle: 'Beneficios exclusivos para socios comprometidos'
+      },
+      howItWorks: {
+        title: '¿Cómo Funciona?',
+        subtitle: 'Simple, transparente y rentable'
+      },
+      commission: { title: 'Estructura de Comisiones' },
+      cta: {
+        title: '¿Listo Para Empezar?',
+        subtitle: '¡Regístrate hoy y empieza a ganar comisiones recurrentes!'
+      },
     },
   },
   fr: {
@@ -825,8 +1073,10 @@ const translations: Record<Language, Translations> = {
         contact: 'Contact',
         blog: 'Blog',
         privacy: 'Politique de Confidentialité',
+        cookies: 'Politique de Cookies',
+        affiliates: 'Programme d\'Affiliation',
       },
-      copyright: '2024 Missão Design. Tous droits réservés. | TVA : XXX XXX XXX',
+      copyright: '2024 Missão Design. Tous droits réservés.',
       compliance: {
         gdpr: 'GDPR Compliant',
         iso: 'ISO 27001',
@@ -834,6 +1084,70 @@ const translations: Record<Language, Translations> = {
     },
     common: {
       month: '/mois',
+    },
+    privacy: {
+      title: 'Politique de Confidentialité',
+      lastUpdated: 'Dernière mise à jour',
+      intro: {
+        title: 'Introduction',
+        description: 'Missão Design s\'engage à protéger votre vie privée. Cette Politique de Confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations personnelles conformément au Règlement Général sur la Protection des Données (RGPD).'
+      },
+      dataCollection: {
+        title: 'Données Que Nous Collectons',
+        description: 'Nous pouvons collecter et traiter les types de données suivants:'
+      },
+      dataUsage: {
+        title: 'Comment Nous Utilisons Vos Données',
+        description: 'Nous utilisons les informations collectées pour:'
+      },
+      gdpr: {
+        title: 'Vos Droits (RGPD)',
+        description: 'Conformément au RGPD, vous disposez des droits suivants:'
+      },
+      dataSecurity: { title: 'Sécurité des Données' },
+      dataSharing: { title: 'Partage de Données' },
+      retention: { title: 'Conservation des Données' },
+      contact: { title: 'Contactez-nous' },
+    },
+    cookies: {
+      title: 'Politique de Cookies',
+      lastUpdated: 'Dernière mise à jour',
+      intro: {
+        title: 'À Propos de Cette Politique',
+        description: 'Cette Politique de Cookies explique ce que sont les cookies, comment nous les utilisons et vos choix concernant l\'utilisation des cookies sur notre site Web.'
+      },
+      whatAre: { title: 'Qu\'est-ce Que Les Cookies ?' },
+      types: { title: 'Types de Cookies Que Nous Utilisons' },
+      thirdParty: { title: 'Cookies Tiers' },
+      management: { title: 'Gestion des Cookies' },
+      consent: { title: 'Consentement' },
+      contact: { title: 'Contactez-nous' },
+    },
+    cookieConsent: {
+      title: '🍪 Nous Utilisons des Cookies',
+      description: 'Nous utilisons des cookies pour améliorer votre expérience, analyser le trafic et personnaliser le contenu.',
+      accept: 'Accepter Tout',
+      reject: 'Refuser',
+      customize: 'Personnaliser',
+      learnMore: 'En savoir plus',
+    },
+    affiliates: {
+      badge: 'Programme Partenaire',
+      title: 'Programme d\'Affiliation Missão Design',
+      subtitle: 'Gagnez des commissions récurrentes en recommandant nos services premium de marketing digital, conception web et IA.',
+      benefits: {
+        title: 'Pourquoi Devenir Affilié ?',
+        subtitle: 'Avantages exclusifs pour les partenaires engagés'
+      },
+      howItWorks: {
+        title: 'Comment Ça Marche ?',
+        subtitle: 'Simple, transparent et rentable'
+      },
+      commission: { title: 'Structure de Commissions' },
+      cta: {
+        title: 'Prêt à Commencer ?',
+        subtitle: 'Inscrivez-vous aujourd\'hui et commencez à gagner des commissions récurrentes !'
+      },
     },
   },
 };

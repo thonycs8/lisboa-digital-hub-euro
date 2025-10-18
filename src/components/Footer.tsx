@@ -1,5 +1,5 @@
-
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
@@ -53,8 +53,9 @@ const Footer = () => {
               <li><a href="#about" className="hover:text-white transition-colors">{t('footer.links.about')}</a></li>
               <li><a href="#pricing" className="hover:text-white transition-colors">{t('footer.links.pricing')}</a></li>
               <li><a href="#contact" className="hover:text-white transition-colors">{t('footer.links.contact')}</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">{t('footer.links.blog')}</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">{t('footer.links.privacy')}</a></li>
+              <li><Link to="/privacy-policy" className="hover:text-white transition-colors">{t('footer.links.privacy')}</Link></li>
+              <li><Link to="/cookie-policy" className="hover:text-white transition-colors">{t('footer.links.cookies')}</Link></li>
+              <li><Link to="/affiliates" className="hover:text-white transition-colors">{t('footer.links.affiliates')}</Link></li>
             </ul>
           </div>
         </div>
