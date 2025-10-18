@@ -20,63 +20,43 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "E-commerce Premium",
-      description: t('portfolio.projects.ecommerce.description'),
-      category: "ecommerce",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop&crop=center",
-      tags: ["React", "Node.js", "Stripe"],
-      liveUrl: "#",
+      title: "Missão Graça e Paz",
+      description: t('portfolio.projects.missaogracaepaz.description'),
+      category: "webdesign",
+      image: "/portfolio/missaogracaepaz.png",
+      tags: ["WordPress", "Streaming", "Responsive"],
+      liveUrl: "https://missaogracaepaz.com",
       githubUrl: "#"
     },
     {
       id: 2,
-      title: "Campanha Marketing Digital",
-      description: t('portfolio.projects.marketing.description'),
+      title: "Andressa Moura - Lash Designer",
+      description: t('portfolio.projects.andressamoura.description'),
       category: "marketing",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop&crop=center",
-      tags: ["Google Ads", "Facebook Ads", "Analytics"],
-      liveUrl: "#",
+      image: "/portfolio/andressamoura.png",
+      tags: ["Landing Page", "WordPress", "Conversão"],
+      liveUrl: "https://andressamoura.pt",
       githubUrl: "#"
     },
     {
       id: 3,
-      title: "Website Corporativo",
-      description: t('portfolio.projects.website.description'),
+      title: "Soneghet Telhados",
+      description: t('portfolio.projects.soneghet.description'),
       category: "webdesign",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop&crop=center",
-      tags: ["React", "Tailwind", "Responsive"],
-      liveUrl: "#",
+      image: "/portfolio/soneghet.png",
+      tags: ["WordPress", "SEO", "Formulários"],
+      liveUrl: "https://soneghet.pt",
       githubUrl: "#"
     },
     {
       id: 4,
-      title: "Chatbot IA",
-      description: t('portfolio.projects.chatbot.description'),
-      category: "ai",
-      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=500&h=300&fit=crop&crop=center",
-      tags: ["OpenAI", "Python", "Automation"],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      id: 5,
-      title: "App Mobile Restaurante",
-      description: t('portfolio.projects.app.description'),
+      title: "Alves Engenharia",
+      description: t('portfolio.projects.alvesengenharia.description'),
       category: "webdesign",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&h=300&fit=crop&crop=center",
-      tags: ["React Native", "Firebase", "Payments"],
-      liveUrl: "#",
+      image: "/portfolio/alvesengenharia.png",
+      tags: ["WordPress", "Orçamentos", "Responsive"],
+      liveUrl: "https://alvesengenharia.com",
       githubUrl: "#"
-    },
-    {
-      id: 6,
-      title: "Dashboard Unisyst",
-      description: t('portfolio.projects.dashboard.description'),
-      category: "CRM",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop&crop=center",
-      tags: ["React", "D3.js", "API Integration"],
-      liveUrl: "https://unisyst.com.br/",
-      githubUrl: "https://github.com/thonycs8/dashboard"
     }
   ];
 

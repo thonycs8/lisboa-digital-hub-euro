@@ -134,12 +134,10 @@ interface Translations {
       ai: string;
     };
     projects: {
-      ecommerce: { description: string; };
-      marketing: { description: string; };
-      website: { description: string; };
-      chatbot: { description: string; };
-      app: { description: string; };
-      dashboard: { description: string; };
+      missaogracaepaz: { description: string; };
+      andressamoura: { description: string; };
+      soneghet: { description: string; };
+      alvesengenharia: { description: string; };
     };
     buttons: {
       live: string;
@@ -305,12 +303,10 @@ const translations: Record<Language, Translations> = {
         ai: 'Inteligência Artificial',
       },
       projects: {
-        ecommerce: { description: 'Loja online completa com sistema de pagamentos integrado e gestão de inventário.' },
-        marketing: { description: 'Campanha de marketing digital que aumentou as vendas em 150% em 3 meses.' },
-        website: { description: 'Website corporativo moderno e responsivo com foco na conversão de visitantes.' },
-        chatbot: { description: 'Assistente virtual inteligente que automatiza 80% do atendimento ao cliente.' },
-        app: { description: 'Aplicação mobile para restaurante com sistema de pedidos e pagamentos online.' },
-        dashboard: { description: 'Dashboard analítico avançado para monitorização de performance em tempo real.' },
+        missaogracaepaz: { description: 'Site institucional de igreja com transmissões ao vivo, gestão de conteúdo e integração com redes sociais' },
+        andressamoura: { description: 'Landing page de alta conversão para curso de Lash Designer com integração WhatsApp e formulários otimizados' },
+        soneghet: { description: 'Website corporativo para empresa de telhados com formulários de orçamento, galeria de projetos e SEO otimizado' },
+        alvesengenharia: { description: 'Plataforma completa para engenharia civil com sistema de orçamentos, gestão de projetos e portfólio de obras' },
       },
       buttons: {
         live: 'Ver Online',
@@ -470,12 +466,10 @@ const translations: Record<Language, Translations> = {
         ai: 'Artificial Intelligence',
       },
       projects: {
-        ecommerce: { description: 'Complete online store with integrated payment system and inventory management.' },
-        marketing: { description: 'Digital marketing campaign that increased sales by 150% in 3 months.' },
-        website: { description: 'Modern and responsive corporate website focused on visitor conversion.' },
-        chatbot: { description: 'Intelligent virtual assistant that automates 80% of customer service.' },
-        app: { description: 'Mobile application for restaurant with online ordering and payment system.' },
-        dashboard: { description: 'Advanced analytics dashboard for real-time performance monitoring.' },
+        missaogracaepaz: { description: 'Church institutional website with live streaming, content management and social media integration' },
+        andressamoura: { description: 'High conversion landing page for Lash Designer course with WhatsApp integration and optimized forms' },
+        soneghet: { description: 'Corporate website for roofing company with quote forms, project gallery and optimized SEO' },
+        alvesengenharia: { description: 'Complete platform for civil engineering with quote system, project management and works portfolio' },
       },
       buttons: {
         live: 'View Live',
@@ -635,12 +629,10 @@ const translations: Record<Language, Translations> = {
         ai: 'Inteligencia Artificial',
       },
       projects: {
-        ecommerce: { description: 'Tienda online completa con sistema de pagos integrado y gestión de inventario.' },
-        marketing: { description: 'Campaña de marketing digital que aumentó las ventas en 150% en 3 meses.' },
-        website: { description: 'Sitio web corporativo moderno y responsivo enfocado en la conversión de visitantes.' },
-        chatbot: { description: 'Asistente virtual inteligente que automatiza el 80% del servicio al cliente.' },
-        app: { description: 'Aplicación móvil para restaurante con sistema de pedidos y pagos en línea.' },
-        dashboard: { description: 'Dashboard analítico avanzado para monitoreo de rendimiento en tiempo real.' },
+        missaogracaepaz: { description: 'Sitio institucional de iglesia con transmisiones en vivo, gestión de contenido e integración con redes sociales' },
+        andressamoura: { description: 'Landing page de alta conversión para curso de Lash Designer con integración WhatsApp y formularios optimizados' },
+        soneghet: { description: 'Sitio web corporativo para empresa de techos con formularios de presupuesto, galería de proyectos y SEO optimizado' },
+        alvesengenharia: { description: 'Plataforma completa para ingeniería civil con sistema de presupuestos, gestión de proyectos y portafolio de obras' },
       },
       buttons: {
         live: 'Ver En Vivo',
@@ -800,12 +792,10 @@ const translations: Record<Language, Translations> = {
         ai: 'Intelligence Artificielle',
       },
       projects: {
-        ecommerce: { description: 'Boutique en ligne complète avec système de paiement intégré et gestion d\'inventaire.' },
-        marketing: { description: 'Campagne de marketing digital qui a augmenté les ventes de 150% en 3 mois.' },
-        website: { description: 'Site web corporatif moderne et responsive axé sur la conversion des visiteurs.' },
-        chatbot: { description: 'Assistant virtuel intelligent qui automatise 80% du service client.' },
-        app: { description: 'Application mobile pour restaurant avec système de commande et paiement en ligne.' },
-        dashboard: { description: 'Dashboard analytique avancé pour surveillance de performance en temps réel.' },
+        missaogracaepaz: { description: 'Site institutionnel d\'église avec diffusions en direct, gestion de contenu et intégration aux réseaux sociaux' },
+        andressamoura: { description: 'Landing page à haute conversion pour cours de Lash Designer avec intégration WhatsApp et formulaires optimisés' },
+        soneghet: { description: 'Site web corporatif pour entreprise de toitures avec formulaires de devis, galerie de projets et SEO optimisé' },
+        alvesengenharia: { description: 'Plateforme complète pour génie civil avec système de devis, gestion de projets et portfolio de travaux' },
       },
       buttons: {
         live: 'Voir En Direct',
