@@ -116,13 +116,14 @@ const Portfolio = () => {
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                  <Button size="sm" variant="secondary" className="bg-white hover:bg-gray-100 shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                  <Button 
+                    size="sm" 
+                    variant="secondary" 
+                    className="bg-white hover:bg-gray-100 shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300"
+                    onClick={() => window.open(project.liveUrl, '_blank')}
+                  >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     {t('portfolio.buttons.live')}
-                  </Button>
-                  <Button size="sm" variant="secondary" className="bg-white hover:bg-gray-100 shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-75">
-                    <Github className="w-4 h-4 mr-2" />
-                    {t('portfolio.buttons.code')}
                   </Button>
                 </div>
                 
