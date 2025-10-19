@@ -1,10 +1,10 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, TrendingUp, Users, Percent, Gift } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import AffiliateForm from "@/components/AffiliateForm";
 
 const Affiliates = () => {
   const { t } = useLanguage();
@@ -56,13 +56,6 @@ const Affiliates = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               {t('affiliates.subtitle')}
             </p>
-            <Button 
-              size="lg" 
-              className="bg-white text-black hover:bg-gray-200 px-8 py-6 text-lg"
-              onClick={() => window.open('https://wa.me/?phone=%2B351928294048&text=Olá%21+Gostaria+de+me+inscrever+no+Programa+de+Afiliados&type=phone_number&app_absent=0', '_blank')}
-            >
-              Inscrever-se Agora
-            </Button>
           </div>
         </section>
 
@@ -203,22 +196,18 @@ const Affiliates = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black text-white">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              {t('affiliates.cta.title')}
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-              {t('affiliates.cta.subtitle')}
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-white text-black hover:bg-gray-200 px-8 py-6 text-lg"
-              onClick={() => window.open('https://wa.me/?phone=%2B351928294048&text=Olá%21+Gostaria+de+me+inscrever+no+Programa+de+Afiliados&type=phone_number&app_absent=0', '_blank')}
-            >
-              Começar Agora
-            </Button>
+        {/* CTA Section with Form */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+                {t('affiliates.cta.title')}
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                {t('affiliates.cta.subtitle')}
+              </p>
+            </div>
+            <AffiliateForm />
           </div>
         </section>
       </main>
