@@ -1,29 +1,75 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 import { X, Cookie } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { toast } from "@/hooks/use-toast";
+
+interface CookiePreferences {
+  necessary: boolean;
+  functional: boolean;
+  analytics: boolean;
+  marketing: boolean;
+}
 
 const CookieConsent = () => {
   const [showBanner, setShowBanner] = useState(false);
+  const [showCustomize, setShowCustomize] = useState(false);
   const { t } = useLanguage();
+  
+  const [preferences, setPreferences] = useState<CookiePreferences>({
+    necessary: true,
+    functional: false,
+    analytics: false,
+    marketing: false,
+  });
 
   useEffect(() => {
     const consent = localStorage.getItem('cookieConsent');
     if (!consent) {
-      // Show banner after 2 seconds
       setTimeout(() => setShowBanner(true), 2000);
     }
   }, []);
 
-  const acceptCookies = () => {
-    localStorage.setItem('cookieConsent', 'accepted');
+  const savePreferences = (prefs: CookiePreferences) => {
+    const consentData = {
+      timestamp: new Date().toISOString(),
+      preferences: prefs,
+    };
+    localStorage.setItem('cookieConsent', JSON.stringify(consentData));
+    toast({
+      title: "Preferências salvas",
+      description: "Suas preferências de cookies foram atualizadas.",
+    });
+  };
+
+  const acceptAll = () => {
+    const allAccepted = {
+      necessary: true,
+      functional: true,
+      analytics: true,
+      marketing: true,
+    };
+    savePreferences(allAccepted);
     setShowBanner(false);
   };
 
-  const rejectCookies = () => {
-    localStorage.setItem('cookieConsent', 'rejected');
+  const rejectAll = () => {
+    const onlyNecessary = {
+      necessary: true,
+      functional: false,
+      analytics: false,
+      marketing: false,
+    };
+    savePreferences(onlyNecessary);
+    setShowBanner(false);
+  };
+
+  const saveCustomPreferences = () => {
+    savePreferences(preferences);
     setShowBanner(false);
   };
 
@@ -48,31 +94,131 @@ const CookieConsent = () => {
                   {t('cookieConsent.learnMore')}
                 </Link>
               </p>
+
+              {showCustomize ? (
+                <div className="space-y-4 mb-4">
+                  <div className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <Checkbox
+                      id="necessary"
+                      checked={preferences.necessary}
+                      disabled
+                      className="mt-1"
+                    />
+                    <div className="flex-1">
+                      <Label htmlFor="necessary" className="font-semibold text-black">
+                        Cookies Necessários
+                      </Label>
+                      <p className="text-sm text-gray-600">
+                        Essenciais para o funcionamento do site. Sempre ativos.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <Checkbox
+                      id="functional"
+                      checked={preferences.functional}
+                      onCheckedChange={(checked) =>
+                        setPreferences({ ...preferences, functional: !!checked })
+                      }
+                      className="mt-1"
+                    />
+                    <div className="flex-1">
+                      <Label htmlFor="functional" className="font-semibold text-black cursor-pointer">
+                        Cookies Funcionais
+                      </Label>
+                      <p className="text-sm text-gray-600">
+                        Permitem funcionalidades melhoradas e personalização.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <Checkbox
+                      id="analytics"
+                      checked={preferences.analytics}
+                      onCheckedChange={(checked) =>
+                        setPreferences({ ...preferences, analytics: !!checked })
+                      }
+                      className="mt-1"
+                    />
+                    <div className="flex-1">
+                      <Label htmlFor="analytics" className="font-semibold text-black cursor-pointer">
+                        Cookies de Análise
+                      </Label>
+                      <p className="text-sm text-gray-600">
+                        Ajudam-nos a entender como os visitantes usam o site.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <Checkbox
+                      id="marketing"
+                      checked={preferences.marketing}
+                      onCheckedChange={(checked) =>
+                        setPreferences({ ...preferences, marketing: !!checked })
+                      }
+                      className="mt-1"
+                    />
+                    <div className="flex-1">
+                      <Label htmlFor="marketing" className="font-semibold text-black cursor-pointer">
+                        Cookies de Marketing
+                      </Label>
+                      <p className="text-sm text-gray-600">
+                        Utilizados para mostrar anúncios relevantes.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ) : null}
               
               <div className="flex flex-wrap gap-3">
-                <Button 
-                  onClick={acceptCookies}
-                  className="bg-black hover:bg-gray-800 text-white"
-                >
-                  {t('cookieConsent.accept')}
-                </Button>
-                <Button 
-                  onClick={rejectCookies}
-                  variant="outline"
-                  className="border-gray-300"
-                >
-                  {t('cookieConsent.reject')}
-                </Button>
-                <Link to="/cookie-policy">
-                  <Button variant="ghost" className="text-gray-600">
-                    {t('cookieConsent.customize')}
-                  </Button>
-                </Link>
+                {showCustomize ? (
+                  <>
+                    <Button 
+                      onClick={saveCustomPreferences}
+                      className="bg-black hover:bg-gray-800 text-white"
+                    >
+                      Salvar Preferências
+                    </Button>
+                    <Button 
+                      onClick={() => setShowCustomize(false)}
+                      variant="outline"
+                      className="border-gray-300"
+                    >
+                      Voltar
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <Button 
+                      onClick={acceptAll}
+                      className="bg-black hover:bg-gray-800 text-white"
+                    >
+                      {t('cookieConsent.accept')}
+                    </Button>
+                    <Button 
+                      onClick={rejectAll}
+                      variant="outline"
+                      className="border-gray-300"
+                    >
+                      {t('cookieConsent.reject')}
+                    </Button>
+                    <Button 
+                      onClick={() => setShowCustomize(true)}
+                      variant="ghost" 
+                      className="text-gray-600"
+                    >
+                      {t('cookieConsent.customize')}
+                    </Button>
+                  </>
+                )}
               </div>
             </div>
             
             <button
-              onClick={rejectCookies}
+              onClick={rejectAll}
               className="text-gray-400 hover:text-gray-600 transition-colors"
             >
               <X className="w-5 h-5" />
